@@ -1,0 +1,38 @@
+{
+  "name": "@workspace/orpc",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./base": "./dist/base/index.mjs",
+    "./handler": "./dist/handler/index.mjs",
+    "./handler/link": "./dist/handler/link.mjs",
+    "./handler/superjson": "./dist/handler/superjson.mjs",
+    "./middleware": "./dist/middleware/index.mjs",
+    "./router": "./dist/router/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "lint": "vp check --fix"
+  },
+  "dependencies": {
+    "@orpc/client": "^1.15.5",
+    "@orpc/openapi": "^1.15.5",
+    "@orpc/server": "^1.15.5",
+    "@orpc/shared": "^1.15.5",
+    "@orpc/zod": "^1.15.5",
+    "@workspace/auth": "workspace:*",
+    "@workspace/shared": "workspace:*",
+    "better-result": "^3.0.1",
+    "effect": "^4.0.2",
+    "superjson": "^2.2.6",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@workspace/typescript-config": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "^6"
+  }
+}
